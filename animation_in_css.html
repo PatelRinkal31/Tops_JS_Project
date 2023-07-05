@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle animation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            right: 0;
+            left: 0;
+            border: 10px solid black;
+            border-radius: 50%;
+            background-color: aqua;
+            position: absolute;
+            animation-name: slideme;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            /* animation-fill-mode: backwards; */
+            animation-delay: 2s;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        @keyframes slideme {
+          0%{
+            /* top: 0; */
+            left: 0;
+            right: 0;
+          }
+          100% {
+            /* top: 100%; */
+            left: 50%;
+            right: 50%;
+          }
+       }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+</body>
+</html>

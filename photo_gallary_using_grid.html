@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('span').click(function(){
+                $('.right_herader').hide();
+            });
+		});
+	</script>    
+    
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    .conatiner{
+         width: 100%;
+        }
+    img{
+        max-width: 100%;
+    }
+    .photo_gallary{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(3,250px);
+        height: 700px; 
+        row-gap: 10px;
+        column-gap: 15px;
+    }
+    .photo{
+        border: 2px solid black;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .photo1{
+         grid-column: 1/4;
+        background-image: url('images/e1.jpg');
+        
+
+    }
+    .photo2{
+        grid-column: 4/6;
+        background-image: url('images/e2.jpg');
+        
+    }
+    .photo3{
+        grid-row: 2/4;
+        background-color: blanchedalmond;
+    }
+    .photo4{
+        grid-column: 2/6;
+        background-image: url('images/e4.jpg');
+        
+    }
+    .photo5{
+        grid-column: 2/5;
+        background-image: url('images/e5.jpg');
+    }
+    .photo6{
+        background-image: url('images/e7.jpg');
+    }
+    .right_herader {
+    right: 0;
+    display: inline-block;
+    position: absolute;
+    height: 780px;
+    background: gray;
+    top: 0;
+    width: 150px;
+    cursor: pointer;
+}
+/* .right_herader:hover{
+    display: none;
+} */
+li{
+    list-style: none;
+}
+a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+}
+a:hover{
+    background-color: olive;
+    border: 1px solid saddlebrown;
+}
+span {
+    position: absolute;
+    right: 9px;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+</style>
+<body>
+    <div class="conatiner">
+        <div class="photo_gallary">
+            <div class="photo1 photo"></div>
+            <div class="photo2 photo"></div>     
+            <div class="photo3 photo"></div>
+            <div class="photo4 photo"></div>
+            <div class="photo5 photo"></div>
+            <div class="photo6 photo"></div>
+        </div>
+        <div class="right_herader">
+            <span>X</span>
+           <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Conatct Us</a></li>
+            <li><a href="">Select Us</a></li>
+           </ul>
+        </div>
+    </div>
+</body>
+</html>

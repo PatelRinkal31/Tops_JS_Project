@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAPI File.name</title>
+</head>
+<body>
+    <div id="main">
+        <div>GeeksforGeeks</div>
+        <div>file.size</div>
+        <input type="file" multiple id="file_input" onchange="myGreek(this)">
+    </div>
+    <script>
+        // function myGreek(fileInput){
+        //     var fileInput = document.getElementById('file_input');
+        //     var files = fileInput.files;
+        //     console.log(files);
+        //     for(let i=0;i<files.length;i++){
+        //         // alert(files[i].name +"has a size of" +files[i].size+'Bytes' );
+        //         console.log(files[i].name +" has a size of" + files[i].size +'Bytes')
+        //     }
+        // }
+
+        function myGreek(a){
+             var b = document.getElementById('file_input');
+            var f = b.files;
+            for(let i = 0;i<f.length;i++){
+                console.log(f[i].name +'and' + f[i].size);
+            }
+        }
+    </script>
+</body>
+</html>

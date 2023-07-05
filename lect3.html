@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let var and const</title>
+</head>
+<body>
+    <script>
+        let x = 25; //global
+        x=90;
+        {
+            let x = 30; // local
+            console.log(x);
+        }
+        console.log(x);
+        var a = 55; //global
+        a = 120;
+        {
+            var a = 60; //global
+            console.log(a);
+        }
+        console.log(a);
+
+        const b = 33;
+        // b = 11;
+        {
+            const b = 90;
+            console.log(b);
+        }
+        console.log(b);
+
+        // let nm = 56444444444444444444444444444444444444444444444444444654;
+        // let nm = 564444444444444444444444444444444444444444444444444465n;
+        let nm = BigInt(564444444444444444444444444444444444444444444444444465);
+        console.log(nm);
+        console.log(typeof nm);
+
+        let m = null;
+        console.log(typeof m);
+        console.log(m);
+
+        let n ;
+        console.log(typeof n);
+        console.log(n);
+
+        let symbol = Symbol('This is Javascript code');
+        console.log(symbol);
+        console.log(typeof symbol);
+        
+    </script>
+</body>
+</html>

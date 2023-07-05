@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container{
+        background-color: orchid;
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        'header header header header header header'
+        'menu main main main right right'
+        'menu main_conatain main_conatain main_conatain main_conatain sub_conatain'
+        'menu footer footer footer footer footer';
+    }
+    .items{
+        padding: 20px;
+        color: maroon;
+        font-size: 25px;
+        border: 2px solid maroon;
+        text-align: center;
+        background-color: aqua;
+    }
+    #grid-1{
+        grid-area: header;
+    }
+    #grid-2{
+        grid-area: menu;
+    }
+    #grid-3{
+        grid-area: main;
+    }
+    #grid-4{
+        grid-area: right;
+    }
+    #grid-5{
+        grid-area: main_conatain;
+    }
+    #grid-6{
+        grid-area: sub_conatain;
+    }
+    #grid-7{
+        grid-area: footer;
+    }
+</style>
+<body>
+    <h1>Layout</h1>
+    <h1></h1>
+    <div class="grid-container">
+        <div class="items" id="grid-1">Header</div>
+        <div class="items" id="grid-2">Menu</div>
+        <div class="items" id="grid-3">Main</div>
+        <div class="items" id="grid-4">Right</div>
+        <div class="items" id="grid-5">main Contain</div>
+        <div class="items" id="grid-6">sub conatin</div>
+        <div class="items" id="grid-7">Footer</div>
+    </div>
+</body>
+</html>
