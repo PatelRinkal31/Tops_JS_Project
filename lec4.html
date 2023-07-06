@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Function</title>
+</head>
+<body>
+    <h1>Array and Function</h1>
+    <script>
+        let arr = ['Ram','Shyam','Madhav','Arjun','Nakul'];
+        console.log(arr);
+        // arr.push('Draupadi');
+        arr.pop();
+        console.log(arr);
+    //    let del = arr.pop();
+        // console.log(del);
+        // arr.unshift('Krushna');
+        // arr.shift();
+        // console.log(arr);
+
+        function add(x,y){
+            return x+y;
+        }
+        let addi = add(10,20);
+        console.log(`Addition of two variables : ${addi}`);//templating
+        const result = function(x,y){
+            return x+y;
+        }
+        const r1 = result(100,200);
+        console.log(`ADDITION OF TWO VARIABLES ${r1}`);
+
+        //arrow function
+        const res = (x,y) => x+y;
+        const re = res(500,600);
+        console.log('Addition of two variable',re);
+
+    </script>
+</body>
+</html>
