@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in Array</title>
+</head>
+<body>
+    <h1>Function in Array</h1>
+    <script>
+        console.log('There are different function in array');
+        function add1(x,y)//normal function (function declaration)
+        {
+            return x+y;
+        }
+        let add_result1 = add1(20,30);
+        console.log(`This is the result of two number ${add_result1}`);//templating 
+
+
+        let add2 = function(x,y) //variable function (function expression)
+        {
+            return x+y;
+        }
+        let add_result2 = add2(100,100);
+        console.log(`This is second way to create a function and display the output ${add_result1}`);
+        
+
+        let add3 = (x,y)=> x+y; //arrow function
+        let add_result3 = add3(300,50);
+        console.log('This is  third way to create a function',add_result3);//normal console
+    </script>
+</body>
+</html>
