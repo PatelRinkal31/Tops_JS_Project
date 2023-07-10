@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming</title>
+</head>
+<body>
+    
+</body>
+<script>
+   /* let div = document.createElement('div');
+    div.textContent = "Welcome to Javascript Programming";
+    document.body.append(div);
+    console.log(div);
+    div.style.backgroundColor ='cyan';
+    div.style.width ="200px";
+    div.style.height='300px';
+    div.style.color='orange';
+    div.style.margin='0 auto';
+    div.style.padding='20px';
+    div.style.borderRadius='25px';
+    div.style.fontSize='20px'*/
+    document.body.style.margin = '0';
+    let div = document.createElement('div');
+    console.log(div);
+    document.body.append(div);
+    div.style.backgroundColor = 'pink';
+    div.style.width='100%';
+    let ul = document.createElement('ul');
+    div.appendChild(ul);
+    ul.style.display = 'flex';
+    var header =['Home','Product','Services','About Us','Contact Us'];
+    var href = ['https://www.google.com/','https://www.facebook.com/'];
+    for(let i=0;i<header.length;i++){
+        let name = header[i];
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        var linkTest = document.createTextNode(name);
+        a.appendChild(linkTest);
+        document.body.appendChild(a);
+        li.appendChild(a);
+        a.title = "This is Link";
+        a.href = "https://www.google.com/"; 
+        a.style.textDecoration = 'none';
+        a.style.color='black';
+        ul.appendChild(li);
+        ul.style.margin = '0px';
+        li.style.listStyle = 'none';
+        li.style.padding ='10px 20px';
+        li.className = 'hover';
+        li.style.margin ='0 10px';
+        li.style.cursor='pointer';
+        li.style.fontSize = '20px';
+        // li.style.cssText ='padding:10px 20px;margin:0 10px;cursor:pointer';
+        a.addEventListener('mouseover',function(){
+            this.style.backgroundColor = 'black';
+            this.style.color = 'white';   
+            this.style.padding ='20px 5px';
+            // this.style.cssText = 'backgroundColor:black; color:white';
+        });
+        a.addEventListener('mouseout',function(){
+            this.style.backgroundColor='pink';
+            this.style.color = 'black';
+        });
+    }
+    let div1 = document.createElement('div');
+    document.body.append(div1);
+    console.log(div1);
+    div1.style.width ='100%';
+    div1.style.backgroundImage = "URL('images/e5.jpg')";
+    div1.style.display='inline-block';
+    div1.style.height = '700px';
+    div1.style.backgroundRepeat='no-repeat';
+    div1.style.backgroundSize = 'cover';
+    
+
+</script>
+</html>
