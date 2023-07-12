@@ -6,18 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sum of Enter number</h1>
+    
 </body>
 <script>
-function sumOfGivenNumber(value){
+    function sumOfGivenNumber(value){
     let sum = 0;
     while(value > 0){
         sum = sum + value % 10;
+        console.log('Sum',sum);
         value = Math.floor(value / 10);
+        console.log('value',value);
     }
     console.log(sum);;
 }
-sumOfGivenNumber(1111);
-
+sumOfGivenNumber(3421);
 </script>
 </html>
