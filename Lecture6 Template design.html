@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Cars</title>
+    <!-- https://nicepage.com/website-templates/preview/modern-cars-41113?device=desktop -->
+</head>
+<body>
+    
+</body>
+<script>
+    document.body.style.margin = '0';
+    let div = document.createElement('div');
+    document.body.append(div);
+    div.style.width='100%';
+    div.style.height = '600px';
+    div.style.backgroundImage = "URL('images/back_img.jpeg')";
+    div.style.backgroundSize = 'cover';
+    let div1 = document.createElement('div');
+    document.body.append(div1);
+    console.log(div1);
+    div1.style.position = 'absolute'
+    div1.style.display = 'grid';
+    div1.style.gridTemplateColumns = '350px 324px';
+    div1.style.gridTemplateRows = '300px 300px'
+    div1.style.width = '50%';
+    div1.style.top = '0';
+    div1.style.right = '0';
+    // div1.style.cssText = 'position:absolute;display:grid;gridTemplateColumns:350px 324px;gridTemplateRows:300px 300px;right:0;top:0;width:50;'
+
+    let div2 = document.createElement('div');
+    div1.appendChild(div2);
+    div2.style.backgroundImage = "url('images/img2.jpeg')";
+    div2.style.backgroundSize = 'cover';
+    div2.style.backgroundPosition ='bottom';
+
+    let div3 = document.createElement('div');
+    div1.appendChild(div3);
+    div3.style.backgroundColor = 'black';
+    let h1 = document.createElement('h1');
+    h1.textContent = 'R8 Coupe Trims'
+    div3.appendChild(h1);
+    h1.style.color = 'white';
+    h1.style.padding = '50px 0 0 20px';
+    h1.style.fontSize = '30px';
+    let a = document.createElement('a');
+    a.textContent = 'View Key Info';
+    a.title = "View Key Info";
+    a.href = "https://nicepage.com/"; 
+    div3.appendChild(a);
+    a.style.color = '#bf404c';
+    a.style.fontSize = '20px';
+    a.style.paddingLeft = '20px';
+
+    let div4 = document.createElement('div');
+    div1.appendChild(div4);
+    div4.style.backgroundColor = '#bf404c';
+    let h11 = document.createElement('h1');
+    h11.textContent = 'Bask in the limelight';
+    div4.appendChild(h11);
+    h11.style.color = 'white';
+    h11.style.padding = '50px 100px 0 20px';
+    h11.style.fontSize = '40px';
+    let p1 = document.createElement('p');
+    p1.textContent = 'Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing';
+    div4.appendChild(p1);
+    p1.style.padding='20px';
+    p1.style.color = 'white';
+    p1.style.fontSize='20px';
+
+    let div5 = document.createElement('div');
+    div1.appendChild(div5);
+    div5.style.backgroundImage = "url('images/img1.jpeg')";
+    div5.style.backgroundSize = 'cover';
+    div5.style.backgroundPosition ='bottom';
+</script>
+</html>
