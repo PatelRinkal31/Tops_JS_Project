@@ -31,17 +31,18 @@
     div.appendChild(ul);
     ul.style.display = 'flex';
     var header =['Home','Product','Services','About Us','Contact Us'];
-    var href = ['https://www.google.com/','https://www.facebook.com/'];
+    var href1 = ['https://www.google.com/','https://www.facebook.com/','https://www.instagram.com/'];
     for(let i=0;i<header.length;i++){
         let name = header[i];
         var li = document.createElement('li');
         var a = document.createElement('a');
+        a.href = href1[i];
         var linkTest = document.createTextNode(name);
         a.appendChild(linkTest);
         document.body.appendChild(a);
         li.appendChild(a);
         a.title = "This is Link";
-        a.href = "https://www.google.com/"; 
+        // a.href = "https://www.google.com/"; 
         a.style.textDecoration = 'none';
         a.style.color='black';
         ul.appendChild(li);

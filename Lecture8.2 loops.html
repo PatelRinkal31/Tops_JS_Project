@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    // let i = 0;
+    // do{
+    //     if(i%2 == 0){
+    //         console.log(i);
+    //     }
+    //     i++;
+    // }while(i<10);
+
+
+    // let i = 0;
+    // do{
+    //     if(i%2 == 1){
+    //         console.log(i);
+    //     }
+    //     i++;
+    // }while(i<10);
+
+
+
+    // let arr = [25,26,27,28,29,30];
+    // let i = 0;
+    // for(i=0;i<arr.length;i++){
+    //     console.log(arr[i]);
+    // }
+
+
+
+    // let arr = [25,26,27,28,29,30];
+    // let i = 0;
+    // for(i of arr){
+    //     console.log(i);
+    // }
+
+
+
+    let arr = [25,26,27,28,29,30];
+    for(i in arr){
+        console.log(i);
+    }
+
+let rem = 0;
+let arm = 0;
+let num = prompt('Enter a NUmber');
+let temp = num;
+let a = num.length;
+    console.log(a);
+while(num>0){
+    
+    rem = num % 10;
+    arm = arm + Math.pow(rem,a)
+    num = parseInt(num/10);
+}
+if(arm == temp){
+    console.log("it's True");
+}
+else{
+    console.log('Upps Wrong');
+}
+
+/*let rem = 0;
+let arm = 0;
+let num = parseInt(prompt('Enter the Nuber'));
+let temp = num;
+while(num>0){
+    rem = num % 10;
+    arm = arm + (rem*rem*rem);
+    num = parseInt(num/10);
+}
+if(arm == temp){
+    console.log("it's True");
+}
+else{
+    console.log('Upps Wrong');
+}*/
+</script>
+</html>

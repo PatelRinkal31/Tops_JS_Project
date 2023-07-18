@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="item">Item1</div>
+    <div class="item">Item2</div>
+    <div class="item">Item3</div>
+    <div class="item">Item4</div>
+    <div class="item">Item5</div>
+    <div class="item">Item6</div>
+    <div class="item">Item7</div>
+    <div class="item">Item8</div>
+    <div class="item">Item9</div> -->
+</body>
+<script>
+    /*let items = document.querySelectorAll('div');
+    console.log(items);
+    // i = 1;
+    while (items <= 10) {
+        document.body.append(items);
+        if (items % 2 == 1) {
+            console.log(items);
+        }
+        items += 1;
+    }*/
+
+   let a = 0;
+    let n = 10;
+    while(a<=n){
+        if(a%2 ==0){
+            console.log(a);
+        }
+        a = a+1;
+    }
+    // let i=0;
+
+
+    let ol = document.createElement('ol');
+    console.log(ol);
+    let i = 0;
+
+    while(i<9){
+
+        let li = document.createElement('li');
+        document.body.append(li);
+
+        if(i%2 ==1){
+
+            li.textContent = 'Apple';
+        }
+        i=i+1;
+        ol.appendChild(li);
+
+    }
+   
+
+    let num =  12345;
+    let rev = 0;
+    let rem = 0;
+    while (num > 0) {
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num = parseInt(num / 10);
+    }
+    console.log(rev);
+
+    
+    /*console.log('enter value sum');
+    let sum = 0;
+    let number = prompt('Enter a Number');
+    for(let a = 0;a<number;a++){
+        console.log(a);
+        sum = sum+a+1;
+    }
+    console.log(sum);*/
+
+    let fruits = ['Apple','Oange','Mango','grapes'];
+    fruits.aaa = 'Kiwi';
+    for(let b in fruits){
+        console.log(b);
+    }
+
+    for(let c of fruits){
+        console.log(c);
+    }
+
+    console.log('Continue key word use');
+    let text = '';
+    for(let x =0;x<10;x++){
+        if(x === 3){
+            break;
+        }
+        text+= x;
+    }
+    console.log(text);
+</script>
+
+</html>

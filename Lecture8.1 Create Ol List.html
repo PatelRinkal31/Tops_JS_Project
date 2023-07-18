@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let users = ['Mummy','Papa','Rinkal','Yaami','Himalay','Mayuri'];
+    let ol = document.createElement('ol');
+    for(let user of users){
+        let li = document.createElement('li');
+        li.innerText = user;
+        li.style.color = 'marron';
+        ol.appendChild(li);
+    }
+    document.body.appendChild(ol);
+
+    let numbers = [10,21,30,89,90,11,90,476374,525621];
+    console.log(numbers);
+    let ol1 = document.createElement('ol');
+    ol1.style.listStyle = 'square';
+    for(let k of numbers){
+        if(k %2 == 1){
+            let li = document.createElement('li');
+            li.innerHTML = k;
+            ol1.appendChild(li);
+        }
+        document.body.appendChild(ol1)
+    }
+// what is difference between innerHTML and innerText
+
+let p = document.createElement('p');
+document.body.append(p);
+p.innerHTML = '<b> Rinkal Patel</b>';
+// p.innerText = '<b> Rinkal Patel</b>';
+</script>
+</html>

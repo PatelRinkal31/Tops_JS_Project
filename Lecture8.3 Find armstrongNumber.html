@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Armstrong Number in Javascript</title>
+</head>
+<body>
+    <form action="">
+
+    </form>
+</body>
+<script>
+    let rem = 0;
+    let arm = 0;
+    let number = prompt('Enter Number');
+    let temp = number;
+    let l = number.length;
+
+    while(number > 0){
+        rem = number % 10;
+        arm = arm + Math.pow(rem,l);
+        number = parseInt(number / 10);
+    }
+    if(arm == temp){
+        console.log("It's Armstrong Number");
+    }
+    else{
+        console.log("It's Not Armstrong Number");
+    }
+</script>
+</html>
