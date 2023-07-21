@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Javascript</title>
+</head>
+<body>
+    <h1>Check Last digit same or Not?</h1>
+</body>
+<script>
+    const a = prompt('Enter a value');
+    const b = prompt('Enter b value');
+    const c = prompt("Enter c value");
+    const r1 = a % 10;
+    const r2 = b % 10;
+    const r3 = c % 10;
+    if(r1 == r2 && r1 == r3){
+        console.log(`${a}, ${b} and ${c} have same digits`);
+    }
+    else{
+        console.log('Not same');
+    }
+</script>
+</html>

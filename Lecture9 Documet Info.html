@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documnet Object Model</title>
+</head>
+<body>
+    <h1>
+        Welcome to Documnet Object Model
+    </h1>
+</body>
+<script>
+    console.log(document);
+    console.log(document.body);
+    console.log(document.URL);
+    console.log(document.head);
+    console.log(document.timeline);
+    console.log('Find h1 tag using document property');
+    console.dir(document);
+    console.dir(document.all);
+    console.dir(document.all[6]);
+
+    console.log('Console all methods');
+    // console.clear();
+    // console.count();
+
+    /*let user = '';
+    function greet(){
+        console.count();
+        return ` Hi ${user}`;
+    }
+    user = 'Krushna';
+    greet();
+    user = 'Radhe';
+    greet();
+    greet();
+    console.count();
+    console.countReset('Krushna');*/
+
+    // console.dir(document);
+    //  console.dirxml(document);
+    // console.error('This is bug');
+
+    // console.group();
+   /* console.log('This is a outer level');
+    console.group();
+    console.log('Level 2');
+    console.group();
+    console.warn('More of level 2');
+    console.log('back 2 level 2');*/
+    // console.groupEnd();
+
+    /*console.groupCollapsed();
+    console.log('dkjkfjjkdfjk');
+    console.group()
+    console.log('jksdjfjdfj');
+    console.groupEnd();
+    console.log('jdhdfddfhsdfjhsdf');*/
+
+    // console.info('Hello');
+    
+    /*function Person(fname,lname){
+        this.fname = fname;
+        this.lname = lname;
+    }
+    const me = new Person('Rinkal','Patel');
+    console.table(me);*/
+
+    // console.time();
+
+    // console.time('answer time');
+    // alert('Click to COntinue');
+    // console.timeLog('Answer Time');
+    // alert('Do a bunch of other stuff');
+    // console.timeEnd('answer time');
+
+
+    console.log('time trace');
+    function foo(){
+        function bar(){
+           function tell(){
+            console.trace()
+           }
+           tell();
+        }
+        bar();
+    }
+    foo();
+    console.warn('Uffs it"s totally wrong');
+
+</script>
+</html>

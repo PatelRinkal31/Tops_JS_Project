@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .demo{
+        width: 500px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <div class="demo">
+        <p>Click on the button to create a form dynamically</p>
+        <button onclick="myForm()">Click Here</button>
+        <p id="GFG_DOWN"></p>
+    </div>
+</body>
+<script>
+    let down = document.getElementById('GFG_DOWN');
+    var br = document.createElement('br');
+    function myForm(){
+        var form = document.createElement('form');
+        form.style.padding = '20px 30px';
+        document.body.append(form);
+        
+        form.setAttribute('method','get');
+        form.setAttribute('action','https://www.google.com/');
+
+        var lable1 = document.createElement('label');
+        lable1.innerText = 'First Name';
+        form.appendChild(lable1);
+        let fname = document.createElement('input');
+        fname.setAttribute('type','text');
+        fname.setAttribute('name','fullname');
+        fname.setAttribute('placeholder','Full Name');
+        form.appendChild(fname);
+        form.style.width = '500px';
+        form.style.backgroundColor = 'lightblue';
+        form.style.border = '2px solid orange';
+        form.style.margin = '0 auto';
+
+        form.appendChild(br.cloneNode());
+        form.appendChild(br.cloneNode());
+       
+        var lable2 = document.createElement('label');
+        lable2.innerText = "Birth Date";
+        form.appendChild(lable2);
+        let BOD = document.createElement('input');
+        BOD.setAttribute('type','date');
+        BOD.setAttribute('placeholder','Enter Your Birthdate');
+        form.appendChild(BOD);
+        form.appendChild(br.cloneNode());
+        form.appendChild(br.cloneNode());
+
+        var lable3 = document.createElement('label');
+        lable3.innerText = "Email Id";
+        form.appendChild(lable3);
+        let email = document.createElement('input');
+        email.setAttribute('type','email');
+        email.setAttribute('placeholder','Enter your Email id');
+        form.appendChild(email);
+        form.appendChild(br.cloneNode());
+        form.appendChild(br.cloneNode());
+
+        var lable4 = document.createElement('label');
+        lable4.innerText = 'Password';
+        form.appendChild(lable4);
+        let pass = document.createElement('input');
+        pass.setAttribute('type','password');
+        pass.setAttribute('placeholder','Enter your password');
+        form.appendChild(pass);
+        form.appendChild(br.cloneNode());
+        form.appendChild(br.cloneNode());
+
+        let lable5 = document.createElement('label');
+        lable5.innerText = 'Hobbies';
+        form.appendChild(lable5);
+        let hobby = ['Dance','Reading spritula book','Singing','Driving'];
+        var selectList = document.createElement('select');
+        selectList.id = 'myselect';
+        form.appendChild(selectList);
+        for(let i = 0;i<hobby.length;i++){
+            var option = document.createElement('option');
+            option.value = hobby[i];
+            option.text = hobby[i];
+            selectList.appendChild(option);
+        }
+        form.appendChild(br.cloneNode());
+        form.appendChild(br.cloneNode());
+
+        let label6 = document.createElement('label');
+        label6.innerText = 'Gender';
+        form.appendChild(label6);
+
+        let male = document.createElement('input');
+        male.type = 'radio';
+        male.name = 'male';//name same
+        male.value = 'female';
+
+        let l_male = document.createElement('label');
+        form.appendChild(l_male);
+        l_male = 'male';
+        l_male.textContent = 'male';
+        l_male.htmlFor= 'male';
+        form.append(l_male);
+
+        let female =  document.createElement('input');
+        female.type = 'radio';
+        female.name = 'male';//name same
+        female.value = 'female';
+        female.innerHTML = 'female';
+        form.appendChild(female);
+        form.appendChild(br.cloneNode());
+        form.appendChild(br.cloneNode());
+
+        var submit = document.createElement('button');
+        submit.setAttribute('name','submit');
+        submit.setAttribute('value','click');
+        submit.innerText = 'Submit';
+        form.appendChild(submit);
+    }
+</script>
+</html>

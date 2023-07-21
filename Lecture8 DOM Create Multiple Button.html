@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Javascript</title>
+</head>
+<body>
+    <div class="test">
+        <button onclick="myFunction(100)">Create Button</button>
+    </div>
+</body>
+<script>
+    function myFunction(e){
+        for(let i = 0;i<e;i++){
+            let newBtn = document.createElement('button');
+            newBtn.innerText = 'Click Here';
+            newBtn.style.backgroundColor = 'orange';
+            newBtn.style.padding = '10px 20px';
+            newBtn.style.margin = '5px 10px';
+            newBtn.style.fontSize = '20px';
+            newBtn.style.color = 'marron';
+            newBtn.style.borderRadius = '20px';
+            newBtn.style.cursor = 'pointer';
+            document.querySelector('.test').appendChild(newBtn);
+        }
+    }
+
+</script>
+</html>
