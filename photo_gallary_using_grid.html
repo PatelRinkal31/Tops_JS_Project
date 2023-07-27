@@ -27,7 +27,8 @@
     .photo_gallary{
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        /* grid-template-columns: repeat(5,1fr); */
+        grid-template-columns: repeat(auto-fill,300px);
         grid-template-rows: repeat(3,250px);
         height: 700px; 
         row-gap: 10px;
@@ -104,6 +105,11 @@ span {
     height: 20px;
     text-align: center;
     border: 1px solid black;
+}
+@media only screen and (max-width:768px) {
+    .photo_gallary{
+        grid-template-columns: 2fr;
+    }
 }
 </style>
 <body>

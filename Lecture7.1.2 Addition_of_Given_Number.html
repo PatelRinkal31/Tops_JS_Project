@@ -11,14 +11,20 @@
 <script>
     function sumOfGivenNumber(value){
     let sum = 0;
-    while(value > 0){
-        sum = sum + value % 10;
-        console.log('Sum',sum);
-        value = Math.floor(value / 10);
-        console.log('value',value);
+    // while(value > 0){
+    //     sum = sum + value % 10;
+    //     console.log('Sum',sum);
+    //     value = Math.floor(value / 10);
+    //     console.log('value',value);
+    // }
+    // console.log(sum);
+    while(value>0){
+        let rem = value % 10;
+        sum = sum+rem;
+        value = parseInt(value/10);
     }
-    console.log(sum);;
+    console.log(sum);
 }
-sumOfGivenNumber(3421);
+sumOfGivenNumber(342155);
 </script>
 </html>

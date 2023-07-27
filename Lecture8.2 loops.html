@@ -45,29 +45,29 @@
 
 
 
-    let arr = [25,26,27,28,29,30];
-    for(i in arr){
-        console.log(i);
-    }
+//     let arr = [25,26,27,28,29,30];
+//     for(i in arr){
+//         console.log(i);
+//     }
 
-let rem = 0;
-let arm = 0;
-let num = prompt('Enter a NUmber');
-let temp = num;
-let a = num.length;
-    console.log(a);
-while(num>0){
+// let rem = 0;
+// let arm = 0;
+// let num = prompt('Enter a NUmber');
+// let temp = num;
+// let a = num.length;
+//     console.log(a);
+// while(num>0){
     
-    rem = num % 10;
-    arm = arm + Math.pow(rem,a)
-    num = parseInt(num/10);
-}
-if(arm == temp){
-    console.log("it's True");
-}
-else{
-    console.log('Upps Wrong');
-}
+//     rem = num % 10;
+//     arm = arm + Math.pow(rem,a)
+//     num = parseInt(num/10);
+// }
+// if(arm == temp){
+//     console.log("it's True");
+// }
+// else{
+//     console.log('Upps Wrong');
+// }
 
 /*let rem = 0;
 let arm = 0;
@@ -84,5 +84,26 @@ if(arm == temp){
 else{
     console.log('Upps Wrong');
 }*/
+
+
+
+
+
+let a1 = parseInt(prompt("enter a value"));
+let b = parseInt(prompt('enter B'));
+console.log('Armstong Number is');
+for(let i = a1;i<b;i++){
+    let x = i.toString().length;
+    let sum = 0;
+    let temp = i;
+    while(temp > 0){
+    let rem = temp %10;
+    sum += rem ** x;
+    temp = parseInt(temp/10);
+    }
+    if(sum == i){
+        console.log(i)
+    }
+}
 </script>
 </html>

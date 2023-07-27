@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper and Sessior</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let playerchoice = prompt("Enter Your choice: rock, paper, scissor");
+    var computerchoice = Math.random();
+    document.write(computerchoice+"<br>");
+    if(computerchoice < 0.34){
+        computerchoice = 'rock';
+    }
+    else if(computerchoice < 0.67){
+        computerchoice = 'paper';
+    }
+    else{
+        computerchoice = 'scissor';
+    }
+    var campare = function(choice1,choice2){
+        if(choice1 == choice2){
+            return "It's Tie";
+        }
+        else if(choice1 === 'rock'){
+            if(choice2 === 'scissor'){
+                return 'Player wins'
+            }
+            else{
+                return 'Computer Wins';
+            }
+        }
+        else if(choice1 === 'paper'){
+            if(choice2 === 'rock'){
+                return 'player wins'
+            }
+            else{
+                return 'Computer wins'
+            }
+        }
+        else if(choice1 === 'scissor'){
+            if(choice2 ==='rock'){
+                return "computer wins"
+            }
+            else{
+                return 'player wins'
+            }
+        }
+    }
+    document.write('Computer choice'+" "+computerchoice+" "+"<br>");
+    document.write('payer choice'+" "+playerchoice+"<br>");
+    document.write(campare(playerchoice,computerchoice));
+</script>
+</html>
