@@ -6,8 +6,62 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sum of Enter number</h1>
+    <h1>Operators in javascript</h1>
 </body>
 <script>
+    console.log('Assignment operator');
+    let a = 'Radhe Krushna';
+    console.log(a);
+
+    console.log('Comparison operators');
+    let b = '1000';
+    let c = 1000;
+    let d = 200;
+    console.log(b==c);
+    console.log(b===c);
+    console.log(b!=c);
+    console.log(b!==c);
+    console.log(c>d);
+    console.log(b<d);
+
+    console.log('Arithmatic Operator');
+    let e = 10;
+    let f = 200;
+    let g= 2;
+    console.log(`Sum of two number ${e+f}`);
+    console.log(`Difference of two number ${e-f}`);
+    console.log(`Sum of two number ${Math.abs(e-f)}`);
+    console.log(`Multiplication of two number ${e*f}`);
+    console.log(`Sum of two number ${f/e}`);
+    console.log(`Modula of two number ${f%e}`);
+    console.log(`increment ${e} and ${++e}`);
+    console.log(--f);
+    console.log(2**3);
+
+    console.log('Logical operatores');
+    let year = 2020;
+    if((year % 4 === 0 && year % 100 != 0) || (year % 400 == 0)){
+        console.log('Yes match')
+    }
+    else{
+        console.log('soory')
+    }
+
+    console.log('bigInt operators');
+    let h = 1n;
+    let j = 3n;
+    console.log(h+j);
+
+    let k = Number(1n) + 10;
+    console.log(k);
+    let l = 1n + BigInt(9);
+    console.log(l);
+
+    console.log('Ternanry operator');
+    marks = 22;
+    let res = marks >= 35 ?'Pass':'Fail';
+    console.log(res);
+
+    
  </script>
 </html>

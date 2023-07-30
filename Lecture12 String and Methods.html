@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>String Methods</h1>
+</body>
+<script>
+    let str = "jay shree Radhe Krushna.";
+    // let index1 = 2;
+    // let index1 = -1;
+    // let res = str.at(index1);
+    // let res = str.at(index1);
+
+    // charAt() it not return negative index value
+    //let index1 = 5;
+    //let res = str.charAt(5);
+    console.log('string charCodeAt() method');
+    let res = str.charCodeAt(1);
+    console.log(res);
+    console.log('String codePointAt()');
+    const icons = '☃★♲';
+    console.log(icons.codePointAt(1));
+    console.log('string concate()');
+    let str1 = 'Madhav';
+    let str2 = 'Govind';
+    let concat_str = str1.concat(' ',str2);
+    console.log(concat_str); 
+
+    console.log('String endsWith()');
+    let ends_with_value = str.endsWith('hna.');
+    console.log(ends_with_value);
+
+    console.log('String fromCharCode()');
+    console.log(String.fromCharCode(65,90));
+
+    console.log('string include() function');
+    let str3 = 'Shree krushna govid hare murari';
+    let word1 = 'krushna';
+    console.log(`the words Krushna ${str3.includes(word1)?'is':'is not'} in the sentence`);
+
+    console.log('string indexOf()');
+    console.log('start with 0');
+    let str4 = 'This is time to do somthing special.time is most Precious';
+    let index_of = 'time';
+    console.log(str4.indexOf(index_of));
+
+
+    console.log('string lastIndexOf()');
+    let str5 = 'This is book. book is most intresting. this is my favorite book';
+    let last_index_of = 'book';
+    console.log(str5.lastIndexOf(last_index_of));
+
+    console.log('String match()');
+    let str6 = 'This is Temple.Name of it is ISKON Temple';
+    let str_match = /[A-Z]/g;// g= global, i = case-sensitive m = multiline search
+    console.log(str6.match(str_match));
+
+    console.log('String padEnd()');
+    let str7 = 'Hello Goood Morning';
+    console.log(str7.padEnd(25,'*'));
+
+    console.log('String padStart()');
+    let str8 = '10';
+    console.log(str8.padStart(3,'&'));
+
+    let fullNumber = '45485834576578346786';
+    let ans = fullNumber.slice(-5);
+    console.log(ans.padStart(fullNumber.length,'&'));
+
+    console.log('String repeat()');
+    let mood = ' Happy';
+    console.log(`I feel ${mood.repeat(10)}`);
+
+    console.log('String replace()');
+    let p = 'This is my room.in the my room all the things are well arranged manners';
+    console.log(p.replace('room','My place'));
+    // let regexp1 = /room/g;
+    // console.log(p.replace(regexp1,"My Place"));
+
+    // console.log(p.replaceAll('room','AAAA'));
+
+    let paragraph1 = 'Is this your laptop?';
+    let regexp2 = /[^\w\s]/g;
+    console.log(paragraph1.search(regexp2));
+    console.log(paragraph1[paragraph1.search(regexp2)]);
+
+    console.log('Sting slice()');
+    let paragraph2 = 'If you work hard today. your tommorow will be great';
+    console.log(paragraph2.slice(24));
+    console.log(paragraph2.slice(4, 19));
+    console.log(paragraph2.slice(-10));
+
+    console.log('String split()');
+    console.log(paragraph2.split(' '));
+
+    console.log('String startWith()');
+    console.log(paragraph2.startsWith('If'));
+    
+    console.log('String subString()');
+    console.log(`Find substring inside the paragraph2 = ${paragraph2.substring(0,11)}`);
+    console.log(`substring = ${paragraph2.substring(10)}`);
+
+    console.log('String Uppercase() and Lowercase()');
+    console.log(paragraph2.toLocaleLowerCase());
+    console.log(paragraph2.toLocaleUpperCase());
+    console.log(paragraph1.toUpperCase());
+
+    console.log('String trim() trimStart() and trimEnd()');
+    let str9 = "     Hello Good! Good Morning All      ";
+    console.log(str9.trim());
+    console.log(str9.trimEnd());
+    console.log(str9.trimStart());
+
+    console.log('String valueOf()');
+    let str10 = '9898R';
+    console.log(str10.valueOf());    
+
+
+    for(let i =1;i<=5;i++){
+        for(let j=1;j<=i;j++){
+            console.log(j+1);
+        }
+        // console.log('<br>');
+    }
+</script>
+
+</html>

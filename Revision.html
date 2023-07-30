@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array functions practice</h1>
+</body>
+<script>
+    // const a = ['AA','VV','BB','RR','RR','RR'];
+    // console.log(a.lastIndexOf('RR'));
+
+    // let num = [1,2,3,4,5];
+    // let map = num.map(x => (x*x));
+    // console.log(map);
+
+    // let num1 = [10,20,30,40,50];
+    // let reduce1 = num1.reduce((a,b) => a+b);
+    // console.log(reduce1);
+
+    // let str = ['Radhe','Krushna','Meera','Madhav','Shyam'];
+    // console.log(str.reverse());
+
+    // let str = ['Radhe','Krushna','Meera','Madhav','Shyam'];
+    // // console.log(str.slice(2,4));
+    // console.log(str.splice(-2));
+
+
+    // let a = [11,21,21,432];
+    // let ans= (ele) => ele % 2 === 0;
+    // console.log(a.some(ans));
+
+    // let some = ['Rinkal','Papa','Yamu','Mummy','Bhai-bhabhi'];
+    // console.log(some.sort());
+
+    // let num1 = [10,20,30,40,50];
+    // console.log(num1.forEach(ele=>console.log(ele+10)));
+
+    // let str1 = [10,20,30,40,50];
+    // console.log(str1.reverse());
+
+
+    console.log('Funcions and type of functions');
+
+   /* function add(){
+        let a = 10;
+        let b = 20;
+        let c = a+b;
+        console.log(`Default function is called here ${c}`); 
+    }
+    add();*/
+
+    // function parameterized_function(name,age,salary){
+    //     console.log(`My Sweet Name is ${name}. I am ${age} age old. and i'm getting ${salary} pay scale every month`);
+    // }
+    // parameterized_function('Rinkal',30,35000);
+
+    // console.log('vlaue parameterized function');
+    // function pramDefaltValFun(name='Rinkal',age=30,salary=35000){
+    //     console.log(`${name} ${age} ${salary}`);
+    // }
+    // pramDefaltValFun();
+    // pramDefaltValFun('AAA',23,43200);
+
+
+    console.log('anonymous function');
+
+    let addition  = function(x,y,z){
+        console.log(x+y+z);
+    }
+    addition(100,200,9000);
+
+    console.log('Arrow function');
+    // let mul = (a,b) => a*b;
+    // let res = mul(10,20);
+    // console.log(res);
+
+
+    let mul = (a,b,c) => a*b*c;
+    console.log(mul(10,20,30));
+
+
+</script>
+</html>

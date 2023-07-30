@@ -1,25 +1,43 @@
-console.log('Hello This is RInkal Patel');
-function display(){
-    console.log('This is Normal function');
-}display();
-function parameterized_function(name,age,salary){
-    console.log(`${name} ${age} and ${salary}`);
+let playerChoice = prompt('Enter your choice:rock,paper,scissor');
+let computerchoice = Math.random();
+if(computerchoice < 0.34){
+    computerchoice = 'rock';
 }
-parameterized_function('Rinkal Patel',30,35000);
-
-function defalut_parameterized_function(name='AAAAA',age=45,salary=90000){
-    console.log(`${name} ${age} and ${salary}`);
+else if(computerchoice < 0.67){
+    computerchoice = 'paper';
 }
-defalut_parameterized_function();
-defalut_parameterized_function('BBBBBB',90,78978779);
-
-console.log('Anonymous function');
-let result = function(x,y,z){
-    let sum = x+y+z;
-    console.log(sum);
+else{
+    computerchoice = 'scissor';
 }
-result(10,20,30);
-
-console.log('Arrow function');
-let result1 = (a,b,c) => console.log(a*b*c);
-result1(10,20,30);
+var compare = function(choice1,choice2){
+    if(choice1 === choice2){
+        return 'It"s Ties';
+    }
+    else if(choice1 === 'rock'){
+        if(choice2 === 'paper'){
+            return 'computer wins'
+        }
+        else{
+            return 'player wins';
+        }
+    }
+    else if(choice1 === 'paper'){
+        if(choice2 === 'scissor'){
+            return 'computer wins';
+        }
+        else{
+            return 'player wins';
+        }
+    }
+    else if(choice1 === 'scissor'){
+        if(choice2 === 'rock'){
+            return 'compuer wins';
+        }
+        else{
+            return 'player wins';
+        }
+    }
+}
+document.write(computerchoice+"<br>");
+document.write(playerChoice+"<br>");
+document.write(compare(playerChoice,computerchoice));
