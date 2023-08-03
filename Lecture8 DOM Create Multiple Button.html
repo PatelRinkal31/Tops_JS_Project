@@ -7,21 +7,21 @@
 </head>
 <body>
     <div class="test">
-        <button class="test" onclick="myFunction(10)">Submit</button>    
+        <button onclick="myFunction(100)">Create Button</button>
     </div>
 </body>
 <script>
     function myFunction(e){
-        for(let i = 0;i<=e;i++){
+        for(let i = 0;i<e;i++){
             let newBtn = document.createElement('button');
-            newBtn.textContent = 'Submit';
-            newBtn.style.background = 'lightblue';
-            newBtn.style.padding = "10px 20px";
-            newBtn.style.margin ="10px 20px";
-            newBtn.style.border = '2px solid black';
-            newBtn.style.color = 'blue';
+            newBtn.innerText = 'Click Here';
+            newBtn.style.backgroundColor = 'orange';
+            newBtn.style.padding = '10px 20px';
+            newBtn.style.margin = '5px 10px';
             newBtn.style.fontSize = '20px';
-            newBtn.style.borderRadius = '10px'
+            newBtn.style.color = 'marron';
+            newBtn.style.borderRadius = '20px';
+            newBtn.style.cursor = 'pointer';
             document.querySelector('.test').appendChild(newBtn);
         }
     }

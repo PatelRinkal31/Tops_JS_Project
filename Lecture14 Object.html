@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+</body>
+<script>
+    const Person = {
+        name : 'Rinkal',
+        city : 'Junagadh',
+    }
+    const Person_Detail = {
+        Studuy : 'B.E IT',
+        Course:'React Js'
+    }
+    // console.log(Person);
+    // console.log(Person.name);
+    // console.log(Person['name']);
+    // console.log(Person_Detail);
+
+    var obj1 = { name: 'pizza', car: 'ford' }
+    var obj2 = { name: 'dog' }
+    var obj3 = {name : 'Patel'}
+
+    let a = { ...obj1, ...obj2,...obj3}
+    console.log(a);
+
+    const tr = {name : 'Rinkal',age : 28};
+    const sr = {corce : 'React Js'};
+    const r = Object.assign(tr,sr);
+    console.log(r);
+    console.log(tr);
+    console.log(sr);
+
+
+    // convert array to object
+    const fruits = ['Apple','Orange','Grapes','Kiwi'];
+    const res = {...fruits};
+    console.log(res);
+
+    function AddintionVaue(x,y,z,a){
+        return x+y+z+a;
+    }
+    let arr = [10,20,30,55];
+    let res1 = AddintionVaue(...arr);
+    console.log(res1);
+
+</script>
+
+</html>

@@ -82,5 +82,53 @@
     console.log(mul(10,20,30));
 
 
+    const person = {
+        name : 'Rinkal',
+        age : 30,
+        study : 'BE IT',
+        year : '2011-2014'
+    }
+
+    const data ={
+        course : 'React Js',
+        institute : 'Tops Technology'
+    }
+    let res1 = {...person,...data};
+    console.log(res1);
+
+    let res2 = Object.assign(person,data);
+    console.log(res2);
+
+
+    let obj1 = {name : 'Rinkal', age : 30, city : 'Junagadh'}
+    let obj2 = {name : 'Himalay', age : 27,city:'Junagadh'};
+    let obj3 ={name:'Yaami', age:'14 months',city:'Junagadh'};
+
+    let res3 = {...obj1,...obj2,...obj3};
+    console.log(res3);
+
+
+    let cities = ['Junagadh','Baroda','Rajkot','Surat'];
+    console.log(cities);
+    let ans = {...cities};
+    console.log(ans);
+
+
+    function displaySum(x,y,z){
+        return x*y+z
+    }
+
+    let a = [10,20,30];
+    let res5 = displaySum(...a);
+    console.log(res5);
+    console.log('append function called here');
+    function append(value,array=[]){
+        array.push(value);
+        let ans = array;
+        console.log(ans);
+    }
+    append(10);
+    append(20);
+
 </script>
 </html>
