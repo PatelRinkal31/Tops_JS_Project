@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filter() and Map() functions in javascript</h1>
+</body>
+<script>
+    
+    const ages = [20,30,40,50,55,60,53,56];
+
+    // map:
+
+    // ages.map((e1)=>{
+    //     console.log(e1);
+    // });
+
+    // ages.filter((e1)=>{
+    //     console.log(e1);
+    // })
+
+    // ages.map((el)=>{
+    //     // if(el>50){
+    //     //     console.log(el);
+    //     // }
+    //     // if(el>44 && el<55){
+    //     //     console.log(el);
+    //     // }
+    //     let res = (el>=60 ? el : true);
+    //     console.log('Answers' +res);
+    // });
+
+        let numbes = [20,30,40,50,90];
+        numbes.filter((el)=>{
+            let result = el>=50 ? el : 'RInkal';
+            console.log(result);
+        })
+
+    // let result = ages.filter((el)=>el>=50);
+    // console.log(result);
+
+    
+    const companies = [
+      { name: "TCS", category: "Infrasture", start: 1990, end: 2015 },
+      { name: "Apple", category: "Service", start: 1991, end: 2050 },
+      { name: "Insosys", category: "BPO Services", start: 1991, end: 2015 },
+      { name: "Tech Mahindra", category: "Developing", start: 1990, end: 2015 },
+      { name: "Cisco", category: "Security", start: 2000, end: 2015 },
+      { name: "Hopiant", category: "Web Designing", start: 1992, end: 2015 },
+      { name: "Tech-Private", category: "Infrasture", start: 1998, end: 2015 },
+      { name: "TCS", category: "Web Designing", start: 2010, end: 2015 },
+      { name: "Indigo", category: "Infrasture", start: 1999, end: 2015 },
+      { name: "StarBird", category: "Infrasture", start: 2000, end: 2015 },
+    ];
+
+    const ages1 = [20,30,40,50,78,76,34,90];
+
+    // Here is diference between map and filter
+    const data = ages1.filter((age)=>age>=50);
+    console.log(data);
+    console.log(ages1);
+
+    const data1 = ages1.map((age)=>age>=50);
+    console.log(data1);
+    console.log(ages1);
+    
+
+
+    // const company = companies.filter(function(comapny){
+    //     if(comapny.category === 'Service')
+    //     {
+    //         // return comapny.name
+    //         return true;
+    //     }
+    // })
+    // console.log(company);
+
+
+
+    // const user = [
+    //    {name:'Rinkal',lname:'Patel',age:30},
+    //    {name:'Yaami',lname:'Bhimani',age:1},
+    //    {name:'Himalay Pravinbhai',lname:'Bhimani',age:28}
+    // ]
+    // // user.map((el)=>{
+    // //     console.log(el.name);
+    // // });
+
+    // console.log('Here is filter function');
+    // user.filter((el)=>{
+    //    if(el.age >=29)
+    //    {
+    //     console.log(el)
+    //    }
+    // });
+
+    // console.log('Shallow Method');
+    // const Person = {
+    //     name:'Krushna',
+    //     age:5000
+    // }
+    // const s1 = Person;
+    // s1.age = 6000;
+    // console.log(Person.age);
+    // console.log(s1.age);
+
+    // console.log('Deep Method');
+    // const Person1 = {
+    //     name:'Rinkal',
+    //     age:30
+    // }
+    // const s11 = Person1;
+    // s11.age = 34;
+    // console.log(Person1.age);
+    // console.log(s11.age);
+
+</script>
+</html>

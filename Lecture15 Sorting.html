@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    console.log("Sorting data");
+    function addintionValu(...arrrr) {
+      let result = arrrr.sort();
+      console.log(result);
+    }
+    let arrrr = [46, 24, 32, 41, 92, 91, 7];
+    addintionValu(...arrrr);
+    // let rrr = addintionValu(...arrrr);
+    // console.log(rrr);
+
+    let arr = [46, 24, 32, 41, 92, 91];
+    function selectionSort(arr) {
+      for(let i=0;i<arr.length;i++){
+        for(let j = 0;j<arr.length;j++){
+            if(arr[j] > arr[j+1]){
+                let temp;
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+      }
+      return arr;
+    }
+    console.log("Before sorting: ", arr);
+    console.log("After sorting: ", selectionSort(arr));
+    
+  </script>
+</html>

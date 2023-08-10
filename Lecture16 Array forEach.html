@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map() Filter() Reduce()</h1>
+    <!--  -->
+  </body>
+  <script>
+    //forEach()
+    //map()
+    //reduce()
+    //filter()
+    const companies = [
+      { name: "TCS", category: "Infrasture", start: 1990, end: 2015 },
+      { name: "Apple", category: "Service", start: 1991, end: 2050 },
+      { name: "Insosys", category: "BPO Services", start: 1991, end: 2015 },
+      { name: "Tech Mahindra", category: "Developing", start: 1990, end: 2015 },
+      { name: "Cisco", category: "Security", start: 2000, end: 2015 },
+      { name: "Hopiant", category: "Web Designing", start: 1992, end: 2015 },
+      { name: "Tech-Private", category: "Infrasture", start: 1998, end: 2015 },
+      { name: "TCS", category: "Web Designing", start: 2010, end: 2015 },
+      { name: "Indigo", category: "Infrasture", start: 1999, end: 2015 },
+      { name: "StarBird", category: "Infrasture", start: 2000, end: 2015 },
+    ];
+
+    console.log('Revision of this lecture');
+    companies.forEach(function(comapny){
+     if(comapny.category == 'Web Designing' && comapny.start == 2010){
+      console.log(comapny)
+     }
+    });
+    const ages = [10, 20, 30, 40];
+    ages.forEach((value, index) => {
+      // console.log(`Index is ${index} value ${num}`);
+      console.log(index, value);
+    });
+
+    let scores = [12, 55, 70];
+
+    scores.forEach((score, index, array) => {
+      console.log(array);
+    });
+
+    //array.forEach(element => {})
+
+    // companies.forEach(company => {
+    //     console.log(company.name);
+    // });
+
+    // companies.forEach(function(company){
+    //     if(company.name.length >= 10){
+    //         console.log(company.name);
+    //     }
+    // });
+
+    //arrow function
+    // companies.forEach((company)=>{
+    //     console.log(company.start);
+    // });
+
+    // companies.forEach((company)=>{
+    // console.log(`[${company.start} - ${company.end}]`);
+    // console.log(`Age of the company ${company.name} [${company.end - company.start}]`);
+    // });
+
+    console.log('Revison FORST');
+    companies.forEach(comapny =>{
+      console.log(`[${comapny.end - comapny.start}]`)
+    })
+
+    // companies.forEach((company)=>{
+    //     if(company.category === 'Service'){
+    //         console.log(company.name);
+    //     }
+    // })
+
+    companies.forEach((comapny)=>{
+        if(comapny.start >=2000 && comapny.end <= 2034){
+            console.log(comapny.name +" "+ comapny.start);
+        }
+    });
+  </script>
+</html>
