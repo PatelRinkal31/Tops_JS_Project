@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" placeholder="Enter User name" required id="username"><br>
+        <input type="password" name="" id="password" required><br>
+        <button id="login">Login</button>
+        <button id="reset">Reset</button>
+    </form>
+</body>
+<script>
+    let form = document.getElementById('form');
+    if(localStorage.getItem('username') && localStorage.getItem('password')){
+        document.getElementById('username').value = localStorage.getItem('username');
+        document.getElementById('password').value = localStorage.getItem('password');
+    }
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        localStorage.setItem('username',username);
+        localStorage.setItem('password',password);
+        alert('Data Submited Successfully');
+    });
+
+    //Here clear button not working properly
+    let clear = document.getElementById('reset');
+    clear.addEventListener('click',(e)=>{
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+        // localStorage.clear();
+        alert('data cleared')
+    })
+</script>
+</html>

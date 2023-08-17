@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Program</title>
+</head>
+<body>
+    <h1>combine two object</h1>
+</body>
+<script>
+    let Employee = {
+        name : 'RInkal',
+        age : 28,
+        salary : 40000
+    }
+    let Depart = {
+        Department : 'Front-end develeper',
+        Position:'Seniour Dev.',
+        Compnay:'Hopiant Pvt. Ltd.'
+    }
+  
+    let Information = {...Employee,...Depart};
+    console.log(Information);
+
+    let EmployeeFullInfo = Object.assign(Employee,Depart);
+    console.log(EmployeeFullInfo);
+
+   let EmployeeArr = Object.entries(Employee)
+   console.log(EmployeeArr);
+
+   let DepartArr = Object.entries(Depart);
+   console.log(DepartArr);
+
+   const combine = EmployeeArr.concat(DepartArr);
+   console.log(combine);
+</script>
+</html>

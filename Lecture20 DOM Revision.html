@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>append: String, elelement</h1>
+    <h1>appendchild:element</h1>
+</body>
+<script>
+    let hd = document.createElement('div');
+    // document.body.append('Hello');
+    document.body.appendChild('dvkjsdksd');
+    // document.body.append('djhdfjhs');
+    // console.log(hd);
+
+
+    for(let i=1;i<=5;i++){
+        let p = document.createElement('p');
+        document.body.append(p);
+        p.textContent = "Welcome to JavaScript "+i;
+        if(i == 2){
+            p.style.color = 'Blue';
+            p.style.fontSize ="30px";
+            p.style.border ='2px solid green';
+            p.style.display = 'inline';
+        }
+        else{
+            p.style.color = 'maroon';
+            p.style.fontSize = '30px';
+        }
+        // i = 2 ? p.style.color = 'blue' : p.style.color = 'black';
+    }
+</script>
+</html>

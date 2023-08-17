@@ -1,0 +1,12 @@
+{
+    "name":"Rinkal",
+    "Score":124.7,
+    "isAdmin":true,
+    "licence":null,
+    "shoppingsList":["clothes","Shooes","Mahendi","garbag bag"],
+    "myObject":{
+        "name":"XYZ",
+        "marks":"First Class",
+        "shoppingsList2":["clothes","Shooes",{"a": true,"b":false}]
+    }
+}

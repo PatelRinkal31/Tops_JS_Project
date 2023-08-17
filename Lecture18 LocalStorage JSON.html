@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Local storage progarm</h1>
+    <link rel="JSON" href="first.json" />
+    <a href="https://blog.logrocket.com/localstorage-javascript-complete-guide/">localStorage information</a>
+  </body>
+  <script>
+    let values = `{
+    "name":"Himalay",
+    "Score":124.7,
+    "isAdmin":true,
+    "licence":null,
+    "shoppingsList":["clothes","Shooes","Mahendi","garbag bag"],
+    "myObject":{
+        "name":"XYZ",
+        "marks":"First Class",
+        "shoppingsList2":["clothes","Shooes",{"a": true,"b":false}]
+    }
+}
+`;
+    let users_data = JSON.parse(values);
+    console.log(users_data.name);
+    let compare_data = prompt("Enter Data");
+    if (users_data.name === compare_data) {
+      console.log("Yes successfully");
+    } else {
+      console.log("try again");
+    }
+
+  </script>
+</html>

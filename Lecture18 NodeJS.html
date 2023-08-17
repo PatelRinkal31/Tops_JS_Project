@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+</body>
+<script>
+//  let choice = prompt('eighter addition, sub, mul, division and modula');
+//  let num1 = parseInt(prompt('Enter First Number'));
+//  let num2 = parseInt(prompt('Enter Second Number'));
+//     function calculator(){
+        
+//        addition(100,200);
+//        substraction();
+//        multiplication()
+//        division();     
+//     }
+//     if(choice === 'addition'){
+//         console.log('Addition called')
+//         function addition(x,y){
+//             console.log(x);
+//             console.log(y);
+//             let result = x + y;
+//             console.log(result)
+//         }
+//     }
+    // else{
+    //     console.log('Sorry u not select any item');
+    // }
+
+    //https://sebhastian.com/javascript-console-input/
+//     const readline = require("readline");
+
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+
+// rl.question("What is your name? ", function (answer) {
+//   console.log(`Oh, so your name is ${answer}`);
+// });
+
+
+
+
+const readline = require("readline");
+const ac = new AbortController();
+const signal = ac.signal;
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("What is your name? ", { signal }, (answer) => {
+  console.log(`Oh, so your name is ${answer}`);
+  console.log("Closing the console");
+  process.exit();
+});
+
+signal.addEventListener(
+  "abort",
+  () => {
+    console.log("The name question timed out!");
+  },
+  { once: true }
+);
+
+setTimeout(() => {
+  ac.abort();
+  process.exit();
+}, 10000); // 10 seconds
+
+</script>
+</html>
