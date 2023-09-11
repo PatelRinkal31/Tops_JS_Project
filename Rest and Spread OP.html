@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rest and Spread Operator</h1>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/DoIGxx7P-ps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+    <h2>spred Operator</h2> 
+</body>
+<script>
+    let result1 = Math.max(10,20,32); 
+    console.log(result1);
+    const myObj = {};
+    Object.assign(myObj,{a:1,b:2,c:3},{x:10,y:20,z:30});
+    console.log(myObj);
+
+
+    function sumOf(a,b){
+        return a+ b;
+    }
+    let myA = [10,20];
+    console.log(sumOf(...myA)); // spread operator
+
+
+    function sumOfTwo(...args){
+        let sum = 0;
+        for(let arg  of args){
+            sum += arg;
+        }
+       return sum;
+    }
+
+    console.log(sumOfTwo(10,20,30,40)); //Rest operator
+    // let args = [10,20,30,40,50,100];
+     // console.log(sumOfTwo(...args));
+   
+    //  in above example first two value multiplication
+    // and other values do sum
+
+
+    function multiTask(a,b,c,...args){
+        let mul;
+        let sum = 0;
+        mul = a*b*c;
+        console.log(mul);
+        for(let a of args){
+            sum += a;
+        }
+        return sum;
+    }
+
+    console.log(multiTask(10,20,30,40,50,100)); 
+   
+</script>
+</html>

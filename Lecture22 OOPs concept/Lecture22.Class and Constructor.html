@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Constructor</title>
+</head>
+<body>
+    <h1>Class and Constructor</h1>
+</body>
+<script>
+    class Animal{
+        // constructor(){
+        //     console.log('This is defalut constructor');
+        // }
+        // constructor(name,age){
+        //     this.name = name;
+        //     this.age = age;
+        //     console.log(`Name is ${name} and age is ${age}`);
+        // }
+        constructor(name,age,city){
+            this.name = name;
+            this.age = age;
+            this.city = city;
+        }
+    }
+    // let obj1 = new Animal();
+    // let obj2 = new Animal('Reo',2);
+    let obj3 = new Animal('Reo',5,'Suart');
+    console.log(obj3);
+
+    console.log('NOTE: please note down that we can"t access all the constructor with combile so solution of this is inheritance');
+    
+</script>
+</html>

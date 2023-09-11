@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      Title : <input type="text" id="title" /><br /><br />
+      Body:<input type="text" id="body" /><br /><br />
+      User Id : <input type="text" id="userId" /><br /><br />
+      <input type="button" id="saveForm" value="Submit" />
+    </form>
+    <script>
+      // document.getElementById('saveForm').addEventListener('click',function(e){
+      //     e.preventDefault();
+      //     let obj = {
+      //     title : document.getElementById('title').value,
+      //     body : document.getElementById('body').value,
+      //     userId : document.getElementById('userId').value,
+      // };
+      // fetch("https://jsonplaceholder.typicode.com/posts",{
+      //     method : 'POST',
+      //     body : JSON.stringify(obj),
+      //     Headers:{
+      //         'Content-type': 'application/json; charset=UTF-8',
+      //     },
+      // })
+      // .then((response)=>response.json())
+      // .then((data)=>console.log(data))
+      // .catch((e)=>console.log('error',e))
+      // });
+
+      document.getElementById("saveForm").addEventListener("click", function (e) {
+          e.preventDefault();
+        //   let obj = {
+        //     title: document.getElementById("tilteText").value,
+        //     body: document.getElementById("bodyText").value,
+        //     userId: document.getElementById("userid").value,
+        //   };
+          fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "POST",
+            body: new FormData(document.getElementById('myForm')),
+            Headers: {
+              "Content-type": "application/x-www-form-urlencoded",
+            },
+          })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((e) => console.log("error", e));
+        });
+    </script>
+  </body>
+</html>

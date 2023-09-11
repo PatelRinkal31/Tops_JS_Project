@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" charset="width=device-width,initial-scale=1.0">
+        <title>Inheritance with methods</title>
+    </head>
+    <body>
+        <h1>multi level inheritance</h1>
+        <a href="https://www.youtube.com/watch?v=2ZNbdUyjGUY" target="_blank">Usefull</a>
+    </body>
+    <script>
+        class Employee{
+            constructor(name,age,salary){
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+                // console.log('defalut constructore');
+            }
+            information(){
+                console.log('Employee name',this.name);
+                document.write(`<h2>Employee Class</h2>
+                name : ${this.name} <br>
+                age : ${this.age} <br>
+                salary  : ${this.salary}
+                `)
+            }
+        }
+        class Manager extends Employee{
+            // i want Employee info then i use super.info() other wise 
+            // it only acceess child method
+            constructor(name,age,salary){
+                super();
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+                
+            // console.log(totalSalary);
+            // document.write(totalSalary);
+            }
+           
+            // information(){
+            //     super.information();
+            //     // console.log('Manager Name is',this.name);
+            // }
+            information(){
+                let ta = 1000;
+                let pa = 300;
+                let totalSalary = (this.salary + ta + pa); 
+                console.log('Employee name',this.name);
+                document.write(`<h2>Manager Class</h2>
+                name : ${this.name} <br>
+                age : ${this.age} <br>
+                salary  : ${totalSalary}
+                `)
+            }
+        }
+        class Client extends Employee{
+            // jo ahi constructor use kari to super() use krvi pdse baki erroe avse
+            //baki upar manager ni jem direct information() ma call karavi sakishu
+            constructor(name,age,salary){
+                super();
+                this.name = name;
+                this.age =age;
+                this.salary = salary;
+            }
+            information(){
+                // super.information();
+                // console.log('Client name is ', this.name,this.age,this.salary);
+                document.write(`<h2>Clint Class</h2>
+                name : ${this.name} <br>
+                age : ${this.age} <br>
+                salary  : ${this.salary}
+                `)
+            }
+        }
+        const e1 = new Employee('Himalay',28,50000);
+        e1.information();
+        const m1 = new Manager('RInkal Patel',30,100000);
+        m1.information();
+        // const m2 = new Manager('Yaami Patel');
+        // m2.information();
+
+        const c1 = new Client('Sean',30,12000);
+        c1.information();
+    </script>
+</html>

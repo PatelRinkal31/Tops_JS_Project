@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut and setTimeInterval</title>
+</head>
+<style>
+    .test{
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        /* display: none; */
+        visibility: none;
+    }
+</style>
+<body>
+    <div class="test"></div>
+    <h1>setTimeOut() and setTimeInterval() function difference</h1>
+</body>
+<script>
+    // function test1(){
+    //     setTimeout(()=>{
+    //         console.log('Hello this is SetTimeOut() Called')
+    //     },5000)
+    // }
+
+    // function test2(){
+    //     setInterval(() => {
+    //         console.log('Hello This is setTimeInterval() called Here')
+    //     }, 1000);
+    // }
+
+    // test1();
+    // test2();
+
+
+    function display1(a,b){
+        console.log(a);
+        console.log(b);
+    }
+    // function display2(){
+    //     console.log('two');
+    // }
+    // function display3(){
+    //     console.log('Three');
+    // }
+   let id =setInterval(display1,2000,"Rinkal","Rinkal2" );
+   console.log(id);
+
+    clearInterval(id,5000);
+
+//    const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
+//    console.log(intervalID);
+
+// function myCallback(a, b) {
+//   // Your code here
+//   // Parameters are purely optional.
+//   console.log(a);
+//   console.log(b);
+// }
+
+
+
+setTimeout(function data(){
+    console.log('Set Time out function')
+},5000)
+
+
+
+// console.log('setTimeOut and clearTimeOut')
+    // function function1(){
+    //     console.log('function1 called');
+    // }
+    // function function2(){
+    //     console.log('function2 called');
+    // }
+    // function function3(){
+    //     console.log('function3 called')
+    // }
+    // setTimeout(function3,1000);
+    // setTimeout(function2,2000);
+    // setTimeout(function1,3000);
+</script>
+
+
+
+
+</html>

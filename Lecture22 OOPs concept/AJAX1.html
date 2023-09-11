@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introdunction about AJAX</h1>
+    <abbr title="Asynchronous Javascript and XML">AJAX</abbr>
+    <b>NOTE: without live server it is not run</b>
+    <p>
+        <!-- AJAX is a technique for creating fast and dynamic web pages
+        client server request response senario in between comes Javascript class
+        so it is called xmlHttpRequest it send to server and without 
+        load the page data changed
+        the data are in three formate
+        (1) Test Fale
+        (2) XML Data
+        (3) JSON Data
+        here request devide in the five steps : called readyState
+        0 : request not initilized (nutral mode)
+        1 : server connection establised
+        2 : request recived
+        3 : processing request
+        4 : request finished and response is ready
+        if server send us response then what things are in this
+        (1) Status 200 : 'ok', 403 : 'Forbidden' and 404 : 'not found'
+        (2) responseText or response XML 
+
+        xmlHttpRequest - method - 
+        method = get/post
+        filename
+        Asynchronous = true/false -->
+
+    </p>
+    <p id="demo">Here we load data</p>
+    <button onclick="loadData()">CLick Here</button>
+    <script>
+        function loadData()
+        {   var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    // document.getElementById('demo').innerHTML = this.responseText
+                }
+                // else if(this.readyState == 4 && this.status = 404){
+                //     document.getElementById('demo').innerHTML = 'File not found';
+                // }
+            };
+            // xhttp.open('GET',"./first.txt",true);
+            xhttp.open('GET',"https://jsonplaceholder.typicode.com/posts",true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

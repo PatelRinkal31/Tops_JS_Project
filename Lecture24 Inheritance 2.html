@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance</h1>
+</body>
+<script>
+    class User{
+    constructor(email, password)
+    {
+        this.email = email;
+        this.password = password;
+    }
+    login(email, password)
+    {
+        if(email===this.email && password===this.password)
+        {
+            console.log("Login Successfully");
+        }else{
+            console.log("Authentication Failed");
+        }
+    }
+}
+
+class Author extends User{
+    #numOfPost;
+    constructor(email, password)
+    {
+        super(email, password);
+        this.#numOfPost = 10;
+    }
+    createPost(content)
+    {
+        this.#numOfPost++;
+    }
+    getNumOfPost() {
+        return this.#numOfPost;
+    }
+}
+class Admin extends User{
+    constructor(email, password){
+        super(email, password);
+    }
+    login(email, password)
+    {
+        const isValidAdmin = true;
+        if(email === this.email && password===this.password && isValidAdmin)
+        {
+            console.log("Admin Login Successfully");
+        }else{
+            console.log("Authentication Failed");
+        }
+    }
+    removeUser(userId)
+    {
+        console.log("User Removed Successfully");
+    }
+}
+
+const rt = new Author("rinkal@gmail.com", "password");
+rt.login("rinkal@gmail.com", "password")
+var post = rt.getNumOfPost('This is one post')
+console.log(post);
+</script>
+</html>

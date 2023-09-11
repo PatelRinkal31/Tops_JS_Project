@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promise.all() in advance Javascript</h1>
+</body>
+<script>
+    // const p1 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         console.log('The First promise Resolved');
+    //         resolve(10);
+    //     },1*1000);
+    // });
+
+    // const p2 = new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         console.log('The Secound promise resolved');
+    //         resolve(20);
+    //     }, 2*1000);
+    // });
+
+    // const p3 = new Promise((resolve,reject)=>{
+    //     setTimeout(()=>{
+    //         console.log('The Third promise resolved');
+    //         resolve(30);
+    //     },3*1000);
+    // });
+
+    // Promise.all([p1,p2,p3]).then((result)=>{console.log(`Result is : ${result}`)}).catch((e)=>{console.log(`Error is: ${e}`)});
+
+    console.log('Sum of given Variable');
+
+    const p1 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log('The First promise Resolved');
+            resolve(10);
+        },1*1000);
+    });
+
+    const p2 = new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log('The Secound promise resolved');
+            resolve(20);
+        }, 2*1000);
+    });
+
+    const p3 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log('The Third promise resolved');
+            resolve(30);
+        },3*1000);
+    });
+    let total = 0;
+    Promise.all([p1,p2,p3]).then((result)=>{
+        for(let i of result){
+            total = total+i;
+        }
+        console.log(`Result is : ${result}`)
+        console.log(`Total is : ${total}`);
+    }).catch((e)=>{console.log(`Error is: ${e}`)});
+
+</script>
+</html>

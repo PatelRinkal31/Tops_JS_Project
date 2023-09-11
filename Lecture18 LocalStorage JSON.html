@@ -25,7 +25,9 @@
 }
 `;
     let users_data = JSON.parse(values);
-    console.log(users_data.name);
+    // console.log(users_data.shoppingsList[0]);
+    // console.log(users_data.myObject.marks)
+    console.log(users_data.myObject.shoppingsList2[0])
     let compare_data = prompt("Enter Data");
     if (users_data.name === compare_data) {
       console.log("Yes successfully");

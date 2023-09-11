@@ -1,0 +1,41 @@
+[
+    {
+        "Eid" : "E001",
+        "Ename" : "Rinkal Patel",
+        "EDept" : "Front-end Developer",
+        "Salary" : 100000
+    },
+    {
+        "Eid" : "E002",
+        "Ename" : "Anshi Dudhat",
+        "EDept" : "Tester",
+        "Salary" : 25000
+    },
+    {
+        "Eid" : "E003",
+        "Ename" : "Mayuri Patel",
+        "EDept" : "Web Designer",
+        "Salary" : 35000
+    },
+    {
+        "Eid" : "E004",
+        "Ename" : "Payal gothani",
+        "EDept" : "Front-end Developer",
+        "Salary" : 50000
+    },
+    {
+        "Eid" : "E005",
+        "Ename" : "Anand Agrawal",
+        "EDept" : "Front-end Developer",
+        "Salary" : 100000
+    },
+    {
+        "Eid" : "E006",
+        "Ename" : "Himalay Patel",
+        "EDept" : "Executive Officer",
+        "Salary" : 150000
+    }
+]
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Couser in javascript</h1>
+</body>
+<script>
+    // const num = 30;
+    // console.log(30^60);
+    // function returnFun(){
+    //     const x = ()=>{
+    //         a = 10;
+    //         x1 = 90;
+    //         console.log(a);
+    //         const y = ()=>{
+    //             b = 20;
+    //             console.log(x1);
+    //             console.log(b);
+    //             const z = ()=>{
+    //                 c = 30;
+    //                 console.log(c);
+    //             }
+    //             z();
+    //         }
+    //         y();
+    //     }
+    //     x();
+    // }
+    // returnFun();
+
+//     console.log('Clouser in Javascript')
+//    function test(){
+//     let a = 100;
+//     function inner(){
+//         console.log(a);
+//     }
+//     inner();
+//    }
+//    test();
+
+// function test(){
+//     a = 1000;
+//     function iner(){
+//         return a;
+//     }
+//     // console.log(iner);
+//     console.log(iner());
+// }
+// test();
+
+
+// function test(){
+//     a = 100;
+//     return function inner(){
+//         return a;
+//     }
+
+// }
+// inner = test();
+// console.log(inner());
+
+
+function outer(){
+    let outerValue = 100;
+    return function test(){
+        let a = 100;
+        return function inner(){
+            return a * outerValue;
+        };
+    };
+}
+let test = outer();
+// console.log(test());
+let inner = test();
+console.log(inner());
+</script>
+</html>

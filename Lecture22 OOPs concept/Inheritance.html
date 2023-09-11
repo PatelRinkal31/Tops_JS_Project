@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <h1>Inheritance Concept</h1>
+</body>
+<script>
+    class Employee{
+        constructor(name){
+            this.name = name;
+            console.log(`My name is ${this.name}`);
+        }
+    }
+    class Manager extends Employee{
+        constructor(name){
+            super(); 
+            console.log('Manager called',name);
+        }
+    }
+    const e1 = new Employee('Rinakl');
+    const m1 = new Manager('yammi');
+</script>
+</html>

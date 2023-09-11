@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data get from JSON Holder site</h1>
+</body>
+<script>
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    // .then((result)=>result.json()) // white json1 if u want to see error
+    // .then((data)=>console.log(data))
+    // .catch((e)=>document.write('Can"t fetch data'));
+
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then((result)=> result.json())
+    .then((data)=>{
+        for(let i in data){
+            document.write(`<table style="border:1px solid black;width:100%;">
+                <tr>
+                    <td style="display: inline-block;width: 200px">${data[i].id}</td> 
+                    <td style="display: inline-block;width: 200px">${data[i].name}</td>
+                    <td style="display: inline-block;width: 200px">${data[i].username}</td>
+                    <td style="display: inline-block;width: 200px">${data[i].email}<td>
+                    <td style="display: inline-block;width: 200px">${data[i].address.city}<td>
+                </tr>
+                </table>`);
+        }
+    })
+    .catch((e)=>console.log('can"t fetch'));
+
+</script>
+</html>

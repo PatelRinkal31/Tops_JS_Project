@@ -33,11 +33,12 @@
     function Employees(data){
         return data.salary >=30000;
     }
+    console.log('Rinkal patel');
     const emp = [
         {name:"Rinkal",salary:50000},
         {name:'XYZ',salary:20000},
         {name:'Chandu',salary:35000}
-        ].filter(Employees);
+        ].filter((emp)=>emp.salary>40000);
         console.log(emp);
 
     console.log('Shallow Copy')

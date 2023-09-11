@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promise all called here</h1>
+</body>
+<script>
+    let promiseCall = function(data,message){
+        return function(resolve,reject){
+            setTimeout(() => {
+                console.log(`The ${message} Promise called`);
+                resolve(data);
+            }, data*100);
+        }
+    };
+    const p1 = new Promise(promiseCall('10','First'));
+    const p2 = new Promise(promiseCall('20','Second'));
+    const p3 = new Promise(promiseCall('30','Third'));
+    // const p4 = new Promise(promiseCall('40','Forth'));
+    const p4 = new Promise(function(resolve,reject){
+        reject('The 4th promise rejected');
+    })
+    let total = 0;
+    Promise.all([p1,p2,p3,p4]).then((res)=>{
+        for(let i  of res){
+            // total+=i;
+            console.log(i);}
+        console.log(`Result is : ${res}`);
+        // console.log(`Total Is: ${total}`);
+    }).catch((e)=>{console.log(`Error is : ${e}`)});
+</script>
+</html>

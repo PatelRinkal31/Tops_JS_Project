@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class User {
+        #password;
+        constructor(name,usernaem,password){
+            this.name = name;
+            this.usernaem = usernaem;
+            this.#password = password;
+        }
+        login(usernaem,password){
+            if(usernaem === this.usernaem && password === this.#password){
+                // console.log('Suuceessfully');
+                document.write('Yess Success fully')
+            }
+            else{
+                // console.log('fail');
+                document.write('Sorry Failled')
+            }
+        }
+    }
+    let u1 = new User('Rinkal','bhimanirinkal@gmail.com',123);
+    u1.login('bhimanirinkal@gmail.com',123);
+</script>
+</html>

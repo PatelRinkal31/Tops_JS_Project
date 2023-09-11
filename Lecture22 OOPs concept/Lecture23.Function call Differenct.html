@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function called </h1>
+</body>
+<script>
+    // class Demo{
+    //      Function1() {
+    //         console.log('One')
+    //     }
+    //     Function2() {
+    //         console.log('Two')
+    //     }
+    //     Function3() {
+    //         console.log('Three')
+    //     }
+        
+    // }
+    // let d1 = new Demo();
+    // d1.Function3();
+    // d1.Function2();
+    // d1.Function1();
+
+
+
+    // function one(){
+    //     console.log('one');
+    // }
+    // function two(){
+    //     console.log('two');
+    // }
+    // function three(){
+    //     console.log('three');
+    //     two();
+    //     one();
+    // }
+    // three();
+
+
+    function fun1(){
+        console.log('Function 1 called here');
+        
+        fun = function fun2(){
+            console.log('Function 2 called here');
+        }
+       return fun;
+    }
+    function fun3(){
+        console.log('function 3 called here');
+    }
+    fun3();
+    fun1();
+</script>
+</html>

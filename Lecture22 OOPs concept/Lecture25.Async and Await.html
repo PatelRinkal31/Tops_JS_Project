@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async and Await() function</h1>
+</body>
+    <script>
+        // async function test(){
+        //     return 'Hello';
+        // }
+        // test().then((res)=>{
+        //     console.log(res);
+        // }).catch((e)=>{
+        //     console.log(e)
+        // });
+
+        // async function test(){
+        //     console.log('1: case 1');
+        //     await console.log('2: Case 2');
+        //     console.log('3: Case 3');
+        // }
+        // test();
+        // console.log('4: Case 4');
+        // console.log('5: Case 5');
+
+
+        async function test(){
+            // const response = await fetch('./EmployeeData.json');
+            // let emp = await response.json();
+            // return emp;
+            return (await fetch("Lecture22 OOPs concept\EmployeeData.json")).json();
+        }
+        // let a = test();
+        // console.log(a);
+        test().then((data)=>{
+            console.log(Data);
+        }).catch((error)=>{
+            console.log(error);
+        })
+    </script>
+
+</html>

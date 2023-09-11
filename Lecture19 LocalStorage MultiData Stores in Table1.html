@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataStorage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="dataInput">
+        <input type="text" id="fName" placeholder="First Name">
+        <input type="text" id="lName" placeholder="Last Name">
+        <input type="text" id="mId" placeholder="Member Id">
+        <button id="save" class="btn btn-default">Save</button>
+    </div>
+    <div class="container">
+        <table class="table table-striped" id="dataTable">
+            <thead>
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Member Id</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    function MemberInfo(fName,lName,mId){
+        this.FirstName = fName;
+        this.LastName = lName;
+        this.MemberId = mId;
+    }
+    $('#save').click(function(){
+        $("#dataTable").find
+    })
+</script>
+</html>

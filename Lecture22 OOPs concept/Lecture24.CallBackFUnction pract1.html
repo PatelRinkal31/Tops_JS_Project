@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one"></p>
+    <p id="two"></p>
+</body>
+<script>
+    // function myDisplay(some){
+    //     document.getElementById('one').innerHTML = some;
+    // }
+    // function one(){
+    //     myDisplay('Hello');
+    // }
+    // function two(){
+    //     myDisplay('Good Bye');
+    // }
+    // two();
+    // one();
+
+
+    // function myDisplayer(){
+    //     document.getElementById('one').innerHTML = some;
+    // }
+    // function myCalculator(nam1,num2){
+    //     let sum = nam1 + num2;
+    //    document.write('Sum of two numbers are'+"  "+sum);
+    // }
+    // myCalculator(10,20);
+
+
+    // const myNumbers = [4,1,-20,20,-9,21];
+    // const postNumber = removeItem(myNumbers,(x)=>x>=0);
+    // document.getElementById('one').innerHTML = postNumber
+    // function removeItem(num,callback){
+    //     const myArray = [];
+    //     for(let i of num){
+    //         if(callback(i)){
+    //             myArray.push(i)
+    //         }
+    //     }
+    //     return myArray;
+    // }
+     const myNumber = [10,20,-30,-40,60,100,110];
+     const postNUmber = removeItem(myNumber,(x)=>x>=0);
+     document.getElementById('one').innerHTML = postNUmber;
+     function removeItem(num,callback){
+        const myArry = [];
+        for(let i of num){
+            if(callback(i)){
+                myArry.push(i);
+            }
+        }
+        return myArry;
+     }
+</script>
+</html>

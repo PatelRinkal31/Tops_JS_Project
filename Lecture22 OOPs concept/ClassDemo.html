@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>oops Concepts</title>
+    </head>
+    <body>
+        <h1>Oops Concept</h1>
+    </body>
+    <script>
+        class Student{
+            constructor(name,id){
+                this.name = name;
+                this.id = id;
+                console.log('This is Default constructor');
+            }
+            hello(){
+                // console.log(`My name is ${this.name} and my Id is ${this.id}`);
+                document.write(`My name is ${this.name} and my Id is ${this.id}`);
+                document.write('<br>');
+            }
+            static greed(){
+                console.log('This is Static Method');
+            }
+        }
+        const stu = new Student('Rinkal Patel','E0001');
+        stu.hello();
+        // stu.greed();
+        Student.greed(); 
+        const stu1 = new Student('Himalay Bhimnai','E0002');
+        stu1.hello();
+    </script>
+</html>

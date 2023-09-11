@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//     function one(){
+//         setTimeout(()=>{
+//             console.log('RInkal 1')
+//         },3000)
+//     }
+//     function two(){
+//         setTimeout(()=>{
+//             console.log('Rinkal 2')
+//         },2000)
+//     }
+//     function three(){
+//         setTimeout(()=>{
+//             console.log('RInkal 3')
+//         },1000)
+//     }
+// one();
+// two();
+// three();
+
+    // callback
+    // function a(){
+    //     b();
+    //     console.log('a');
+       
+    // }
+    // function b(){
+    //     console.log('b');
+    // }
+    // a(b);
+
+    // function first(){
+    //     console.log('Helo')
+    // }
+    // function second(callback){
+    //     setTimeout(()=>{
+    //         console.log('JavaScript');
+    //         callback();
+    //     },2000)
+    // }
+    // function third(){
+    //     console.log('Program');
+    // }
+    // first();
+    // second(third)
+    // third();
+
+function callBackHell1(){
+    setTimeout(()=>{
+        console.log('main');
+        setTimeout(()=>{
+            console.log('inner 3');
+            setTimeout(()=>{
+                console.log('inner 2');
+                setTimeout(()=>{
+                    console.log('inner 1');
+                    setInterval(()=>{
+                        let sum = 0;
+                        for(let i=0;i<3;i++){
+                            sum = sum+i;
+                        }
+                        console.log(sum);
+                    },1000)
+                },4000)
+            },3000)
+        },2000)
+    },1000)
+}
+
+callBackHell1();
+
+
+function callbackHell(){
+    setTimeout(()=>{
+        // console.log('Rinkal Patel');
+        document.write('Rinkal Patel'+'<br>');
+        setTimeout(()=>{
+            // console.log('Himalay Bhimani');
+            document.write('Himalay Bhimani'+'<br>')
+            setTimeout(()=>{
+                document.write('Yaami Patel'+'<br>')
+                setInterval(()=>{
+                    document.write('Radhe Krushna'+'<br>');
+                },1000);
+            },3000);
+        },2000);
+    },1000)
+}
+callbackHell();
+</script>
+</html>
